@@ -1,0 +1,27 @@
+{
+    "validLoginData":{
+        "username": "Admin",
+        "password": "admin123"
+    },
+
+    "invalidLoginData":[
+        {
+        "username": "invalidAdmin",
+        "password": "invalidPassword"
+    },
+    {
+        "username": "Admin",
+        "password": "&*(YHJKMNN"
+    },
+    {
+        "username": "YHJKII*^^",
+        "password": "admin123"
+    }
+    ],
+    
+    "emptyLoginData":{
+        "username": "",
+        "password": ""
+    }
+}
+
