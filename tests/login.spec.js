@@ -1,6 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test } from '../fixtures/loginFixture';
+import { expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import LoginData from '../test_data/loginTestData.json';
+import { PimPage } from '../pages/PimPage';
+import HomeTestData from '../test_data/homeTestData.json'
 
 
 const url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
@@ -103,3 +106,17 @@ test("Verify Navigation to Official pages", async ({browser}) => {
         }
     }    
 });
+
+test.describe("Verify Navigation to different pages from home", ()=>{
+    for(const pageName of HomeTestData.pagesNames){
+        test(`Verify Navigation to ${pageName.page}`, async({page, loggedIn}) =>{
+            const loginPage = new LoginPage(page);
+            const pimPage = new PimPage(page);
+            await expect(loginPage.dashboard).toHaveText("Dashboard");
+            await pimPage.navigateToPage(pageName.page);
+            await expect(loginPage.dashboard).toHaveText(pageName.page);
+        })
+    }
+})
+
+

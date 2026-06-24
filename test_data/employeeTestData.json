@@ -1,0 +1,21 @@
+{
+    "validEmployeeDetails":{
+        "empFirstName":"hjfjkkl",
+        "empLastName": "uhfjjk",
+        "empId": "3279303"
+    },
+
+    "invalidEmployeeDetails":{
+        "empFirstName":"hjfjkhhj",
+        "empLastName": "uhk",
+        "empId": ""
+    }, 
+
+    "emptyEmployeeDetails":{
+        "empFirstName":"",
+        "empLastName": "",
+        "empId": ""
+    }
+
+
+}

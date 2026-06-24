@@ -1,4 +1,7 @@
-import { test } from '@playwright/test';
+const { Page } = require('@playwright/test');
+  /**
+   * @param {Page} page
+   */
 
 class LoginPage{
 
@@ -19,7 +22,6 @@ class LoginPage{
 
     }
     
-
     async navigateTo(url){
         await this.page.goto(url);
         await this.page.waitForLoadState();
@@ -33,12 +35,10 @@ class LoginPage{
     }
 
     async navigateToOfficialPage(context, officialPages, i){
-    
         const [newPage] = await Promise.all([context.waitForEvent('page'), officialPages.nth(i).click()]);
         const title = await newPage.title();
         await newPage.close();
         return title;
-      
     }
 }
 module.exports = {LoginPage};
