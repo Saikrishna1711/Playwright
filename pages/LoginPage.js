@@ -22,13 +22,13 @@ class LoginPage{
 
     }
     
-    async navigateTo(url){
-        await this.page.goto(url);
+    async navigateTo(){
+        await this.page.goto('/');
         await this.page.waitForLoadState();
     }
 
-    async validateLogin(url, username, password){
-        await this.page.goto(url)
+    async validateLogin(username, password){
+        await this.page.goto('/')
         await this.userNameInput.fill(username);
         await this.passwordInput.fill(password);
         await this.submitBtn.click();

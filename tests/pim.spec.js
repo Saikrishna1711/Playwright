@@ -10,7 +10,7 @@ test("Verify Successsful Add employee flow", async ({page, loggedIn}) => {
     const pimPage = new PimPage(page);
     const loginPage = new LoginPage(page);
     await pimPage.navigateToPage(EmployeeData.pageNames.pimPage);
-    await expect(loginPage.dashboard).toHaveText(pageName);
+    await expect(loginPage.dashboard).toHaveText(EmployeeData.pageNames.pimPage);
 
     await pimPage.employeeAddBtn.click();
     await pimPage.addEmployee(
