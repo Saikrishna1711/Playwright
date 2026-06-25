@@ -20,5 +20,18 @@
         "empFirstName":"kittu",
         "empLastName": "a",
         "empId": "1234098765"
+    },
+    "validEmployeeDetails3":{
+        "empFirstName":"kittu1",
+        "empLastName": "an",
+        "empId": "12340743285"
+    },
+
+    "pageNames":{
+        "pimPage":"PIM",
+        "dashBoardPage":"Dashboard",
+        "RecruitmentPage":"Recruitment"
     }
+
+    
 }
