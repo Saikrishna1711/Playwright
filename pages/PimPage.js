@@ -18,6 +18,9 @@ class PimPage{
         this.successToastmessage = page.locator(".oxd-toast--success");
         this.filterEmpId = page.locator('.oxd-form-row div .oxd-input');
         this.filterEmpName = page.getByPlaceholder("Type for hints...");
+        this.searchBtn = page.getByRole('button', {name: 'Search'});
+        this.empRecord = page.locator(".oxd-table-row--clickable");
+        this.empExistsMessage = page.locator(".oxd-grid-2 span");
 
     
     }

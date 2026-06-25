@@ -15,7 +15,10 @@
         "empFirstName":"",
         "empLastName": "",
         "empId": ""
+    },
+    "validEmployeeDetails2":{
+        "empFirstName":"kittu",
+        "empLastName": "a",
+        "empId": "1234098765"
     }
-
-
 }
